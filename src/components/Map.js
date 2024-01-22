@@ -1,6 +1,7 @@
 import { GoogleMap, Marker } from '@react-google-maps/api';
 import React, { Fragment } from 'react'
 import locMarker from '../152964.svg'
+import { MapOption } from './MapConfig';
 
 const Map = ({isLoaded}) => {
     const containerStyle = {
@@ -47,6 +48,9 @@ const Map = ({isLoaded}) => {
         mapContainerStyle={containerStyle}
         center={center}
         zoom={10}
+        options={{
+          styles: MapOption.mapTheme
+        }}
       >
         {/*<Marker position={center} />
         <Marker position={ballia} /> */}
